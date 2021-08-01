@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    font-size: .938rem;
+    background-color: hsl(250, 60%, 99%);
+    color: hsl(250, 8%, 45%);
+}
+
+h1, h2, h3, h4 {
+    color: hsl(250, 8%, 15%);
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    /*color: hotpink;*/
+}
+
+img {
+    max-width: 100% ;
+    height: auto;
+}
+
+.section {
+    padding: 2rem 0 4rem;
+}
+
+.section__title {
+    font-size: 1.5rem;
+}
+
+.section__subtitle {
+    display: block;
+    font-size: .4rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+i {
+    margin-right: .5rem;
+    width: auto;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /*z-index: ;*/
+    background-color: pink;
+}
+
+.nav {
+    max-width: 968px;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+.nav__logo:hover {
+    color: hotpink;
+}
+
+.nav__toggle {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.nav__toggle:hover {
+    color: hotpink;
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav__menu {
+        position: fixed;
+        bottom: 0%;
+        left: 0;
+        width: 100%;
+        background-color: hsl(250, 8%, 15%);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1.5px 7px hotpink;
+        border-radius: 1rem 1rem 0 0;
+        transition: .3s;
+    }
+
+    a {
+        color: hotpink;
+    }
+}
+
+.nav__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+}
+
+.nav__link:hover {
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.nav__icon {
+    font-size: 1.3rem;
+}
+.nav__close {
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: hotpink;
+}
+
+.nav__close:hover {
+    color: rgb(255, 94, 129);
+}
+
+.show-menu {
+    bottom: 0;
+}
